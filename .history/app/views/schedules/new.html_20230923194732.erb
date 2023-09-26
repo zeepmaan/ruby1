@@ -1,0 +1,30 @@
+<h2>予定の新規追加</h2>
+
+<%= form_with model: @schedule do |schedule|%>
+ <table>
+  <tr>
+   <th><%= schedule.label :title,"タイトル"%></th>
+   <td><%= schedule.text_field :title %></td>
+  </tr>
+
+  <tr>
+   <th><%= schedule.label :title,"開始日"%></th>
+   <td><%= schedule.text_field :title %></td>
+  </tr>
+
+  <tr>
+   <th><%= schedule.label :title,"終了日"%></th>
+   <td><%= schedule.text_field :title %></td>
+  </tr>
+
+  <tr>
+   <th><%= schedule.label :title,"チェックボックス"%></th>
+   <td><%= schedule.check_box :title %></td>
+  </tr>
+
+  <tr>
+   <th><%= schedule.label :title,"スケジュールメモ"%></th>
+   <td><%= schedule.area :title %></td>
+  </tr>
+ </table>
+<% end %>

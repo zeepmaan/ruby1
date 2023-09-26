@@ -1,0 +1,11 @@
+<h2>予定の新規追加</h2>
+
+<%= form_with model: @schedule do |schedule|%>
+ <table>
+  <tr>
+   <th><%= schedule.label :title,"タイトル"%></th>
+   <th><%= schedule.text_field :title %></th>
+   <td></td>
+  </tr>
+ </table>
+<% end %>

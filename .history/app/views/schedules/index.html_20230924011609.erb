@@ -1,0 +1,48 @@
+<header>
+<h1>スケジュール管理アプリ</h1>
+</header>
+
+<body>
+ <div>
+  <h2>予定一覧</h2>
+  <%= link_to "新規投稿", :new_schedule%>
+ </div>
+
+ <% if flash[:notice]%>
+  <p class="notice"><%= flash[:notice]%></p>
+ <%end%>
+
+<table>
+<thead>
+ <tr>
+  <th>ID</th>
+  <th>タイトル</th>
+  <th>開始日</th>
+  <th>終了日</th>
+  <th>終日</th>
+  <th>更新日時</th>
+ </tr>
+</thead>
+
+<tbody>
+ <% @schedules.each do |schedule| %>
+   <tr>
+    <td><%= schedule.id %></td>
+    <td><%= schedule.title %></td>
+    <td><%= schedule.startdate %></td>
+    <td><%= schedule.enddate %></td>
+    <td><%= schedule.checkbox %></td>
+    <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
+    <td><%= link_to "詳細", schedule%></td>
+    <td><%= link_to "編集", [:edit,schedule]%></td>
+    <td><%= link_to "削除", schedule,method::delete
+   </tr>
+ <% end %>
+</tbody>
+</table>
+
+</body>
+
+
+
+

@@ -1,0 +1,35 @@
+<h2>予定を編集してください</h2>
+
+<%= form_with model:@schedule do |schedule|%>
+ <table>
+  <tr>
+   <th><%=schedule.label :title ,"タイトル"%></th>
+   <td><%=schedule.text_field :title%></td>
+  </tr>
+    <tr>
+   <th><%=schedule.label :startdate ,"開始日"%></th>
+   <td><%=schedule.date_field :startdate%></td>
+  </tr>
+    <tr>
+   <th><%=schedule.label :enddate ,"終了日"%></th>
+   <td><%=schedule.date_field :enddate%></td>
+  </tr>
+  <tr>
+   <th>
+    <%=schedule.check_box :checkbox%>
+    <%= schedule.label :checkbox,"終日の場合はチェックを入れます"%>
+  </th>
+  </tr>
+  <tr>
+   <th><%=schedule.label :memo ,"スケジュールメモ"%></th>
+   <td><%=schedule.text_area :memo %></td>
+  </tr>
+ </table>
+
+  <div>
+  <ul>
+   <li><%= link_to "キャンセル",schedules_path %></li>
+   <li><%=schedule.submit "保存"%></li>
+  </ul>
+ </div>
+<%end%>

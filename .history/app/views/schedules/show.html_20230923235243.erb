@@ -1,0 +1,26 @@
+<h2><%= @schedule.title%></h2>
+
+<table>
+ <tr>
+  <th>開始日</th>
+  <td><%= @schedule.startdate %></td>
+ </tr>
+  <tr>
+  <th>終了日</th>
+  <td><%= @schedule.enddate %></td>
+ </tr>
+  <tr>
+  <th>終日</th>
+  <td><%= @schedule.checkbox %></td>
+ </tr>
+  <tr>
+  <th>スケジュールメモ</th>
+  <td><%= @schedule.memo %></td>
+ </tr>
+</table>
+
+<div>
+ <ul>
+  <li><%= link_to"← 一覧にもどる",schedules_path%></li>
+ </ul>
+</div>

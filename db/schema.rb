@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2023_09_23_081837) do
     t.date "startdate"
     t.date "enddate"
     t.boolean "checkbox"
+    t.string "memo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
