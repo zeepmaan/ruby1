@@ -6,7 +6,7 @@ class Schedule < ApplicationRecord
     validate :datecheck
     def datecheck 
      if startdate == nil || enddate == nil
-
+      render :new
      elsif self.startdate > self.enddate 
       errors.add(:enddate, "は開始日より前の日付は登録できません。") 
      end

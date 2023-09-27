@@ -35,7 +35,7 @@
     <td><%= schedule.updated_at.strftime("%Y/%m/%d %H:%M" ) %></td>
     <td><%= link_to "詳細", schedule%></td>
     <td><%= link_to "編集", [:edit,schedule]%></td>
-    <td><%= button_to "削除", schedule,method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+    <td><%= button_to "削除", schedule,method: :delete, data: { confirm: "削除しますか？" }  %></td>
    </tr>
  <% end %>
 </tbody>

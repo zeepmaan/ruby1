@@ -1,7 +1,6 @@
 class SchedulesController < ApplicationController
   def index
     @schedules = Schedule.all
-    @schedule_counts = Schedule.count
   end
 
   def new
@@ -10,6 +9,7 @@ class SchedulesController < ApplicationController
 
   def create
     @schedule = Schedule.new(params.require(:schedule).permit(:title, :startdate, :enddate, :checkbox ,:memo))
+    binding.pry
     if @schedule.save
       flash[:notice] = "スケジュールが登録されました"
       redirect_to :schedules
