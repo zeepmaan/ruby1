@@ -1,0 +1,16 @@
+.header {
+    background-color: aqua;
+}
+
+table th {
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}

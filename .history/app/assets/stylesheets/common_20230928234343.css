@@ -1,0 +1,44 @@
+.header {
+    text-align: center;
+    background-color:#333;
+    color: #f9ecd5;
+}
+
+.PageTitle {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    padding: 10px;
+    background-color: #fbc25b;
+}
+
+table td {
+    padding: 20px 16px;
+    text-align: center;
+    background-color: #f9ecd5;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

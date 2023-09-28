@@ -20,10 +20,12 @@
   </tr>
 
   <tr>
-   <th><%= schedule.label :checkbox,"終日の場合はチェックを入れます"%></th>
-   <td><%=schedule.check_box :checkbox%></td>
+   <th>
+    <%=schedule.check_box :checkbox%>
+    <%= schedule.label :checkbox,"終日の場合はチェックを入れます"%>
+  </th>
   </tr>
-
+  
   <tr>
    <th><%=schedule.label :memo ,"スケジュールメモ"%></th>
    <td><%=schedule.text_area :memo %></td>

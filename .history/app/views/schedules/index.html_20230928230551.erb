@@ -1,8 +1,7 @@
 <body>
-<div class="container1">
  <div class = "PageTitle">
   <h2>予定一覧</h2>
-  <%= link_to( "＋新規投稿", :new_schedule,class: "btn")%>
+  <%= link_to( "新規投稿", :new_schedule,class: "btn")%>
  </div>
 
  <% if flash[:notice]%>
@@ -18,9 +17,6 @@
   <th>終了日</th>
   <th>終日</th>
   <th>更新日時</th>
-  <th></th>
-  <th></th>
-  <th></th>
  </tr>
 </thead>
 
@@ -41,11 +37,8 @@
 </tbody>
 </table>
 
- <div class="Footer">
   <p>予定合計<span><%= @schedule_counts %></span>件</p>
   <%= "本日の日付 #{Date.today}"%>
- </div>
-</div>
 </body>
 
 
