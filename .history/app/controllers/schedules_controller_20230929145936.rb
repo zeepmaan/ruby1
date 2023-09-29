@@ -19,8 +19,10 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @schedules = Schedule.all
     @schedule = Schedule.find(params[:id])
+    binding.pry
+    @schedules = Schedule.all
+    binding.pry
   end
 
   def edit

@@ -1,11 +1,7 @@
-<div class="container1">
- <div class = "PageTitle">
-  <h2><%= @schedule.title%></h2>
-   <div>
-    <%= link_to( "編集", [:edit,@schedule],class: "btn")%>
-    <%= link_to( "削除",schedule_path,method: :delete, data: { confirm: "本当に削除しますか？"},class: "btn") %>
-   </div>
- </div>
+<h2><%= @schedule.title%></h2>
+
+<%= link_to "編集", [:edit,@schedule]%>
+<%= link_to "削除",schedule_path,method: :delete, data: { confirm: "本当に削除しますか？" } %>
 
 <table>
  <tr>
@@ -33,8 +29,7 @@
 </table>
 
 <div>
- <ul class="List">
+ <ul>
   <li><%= link_to"← 一覧にもどる",schedules_path%></li>
  </ul>
-</div>
 </div>

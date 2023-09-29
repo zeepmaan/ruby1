@@ -1,4 +1,3 @@
-<div class="container1">
 <h2>予定の新規追加</h2>
 
 <%= render "shared/error", obj: @schedule %> 
@@ -21,8 +20,10 @@
   </tr>
 
   <tr>
-     <th><%= schedule.label :checkbox,"終日の場合はチェックを入れます"%></th>
-     <td><%= schedule.check_box :checkbox %></td>
+   <th>
+     <%= schedule.check_box :checkbox %>
+     <%= schedule.label :checkbox,"終日の場合はチェックを入れます"%>
+   </th>
   </tr>
 
   <tr>
@@ -38,4 +39,3 @@
   </ul>
  </div>
 <% end %>
-</div>
