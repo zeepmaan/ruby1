@@ -1,0 +1,40 @@
+<div class="container1">
+ <div class = "PageTitle">
+  <h2><%= @schedule.title%></h2>
+   <div>
+    <%= link_to( "編集", [:edit,@schedule],class: "btn")%>
+    <%= link_to( "削除",schedule_path,method: :delete, data: { confirm: "本当に削除しますか？"},class: "btn") %>
+   </div>
+ </div>
+
+<table>
+ <tr>
+  <th>開始日</th>
+  <td><%= @schedule.startdate.strftime("%Y/%m/%d") %></td>
+ </tr>
+  <tr>
+  <th>終了日</th>
+  <td><%= @schedule.enddate.strftime("%Y/%m/%d") %></td>
+ </tr>
+  <tr>
+  <th>終日</th>
+  <td>
+  <% if @schedule.checkbox == true %>
+   <div>○</div>
+  <%else%>
+   <div></div>
+  <%end%>
+  </td>
+ </tr>
+  <tr>
+  <th>スケジュールメモ</th>
+  <td><%= @schedule.memo %></td>
+ </tr>
+</table>
+
+<div>
+ <ul class="List">
+  <li><%= link_to"← 一覧にもどる",schedules_path%></li>
+ </ul>
+</div>
+</div>
