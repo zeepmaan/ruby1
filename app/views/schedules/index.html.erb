@@ -1,0 +1,53 @@
+<body>
+<div class="container1">
+ <div class = "PageTitle">
+  <h2>予定一覧</h2>
+  <%= link_to( "＋新規投稿", :new_schedule,class: "btn")%>
+ </div>
+
+ <% if flash[:notice]%>
+  <p class="notice"><%= flash[:notice]%></p>
+ <%end%>
+
+<table>
+<thead>
+ <tr>
+  <th>ID</th>
+  <th>タイトル</th>
+  <th>開始日</th>
+  <th>終了日</th>
+  <th>終日</th>
+  <th>更新日時</th>
+  <th></th>
+  <th></th>
+  <th></th>
+ </tr>
+</thead>
+
+<tbody>
+ <% @schedules.each do |schedule| %>
+   <tr>
+    <td><%= schedule.id %></td>
+    <td><%= schedule.title %></td>
+    <td><%= schedule.startdate.strftime("%Y/%m/%d") %></td>
+    <td><%= schedule.enddate.strftime("%Y/%m/%d") %></td>
+    <td><%= schedule.checkbox == true ? "○" : ""%> </td>
+    <td><%= schedule.updated_at.strftime("%Y/%m/%d %H:%M" ) %></td>
+    <td ><%= link_to "詳細", schedule%></td>
+    <td><%= link_to "編集", [:edit,schedule]%></td>
+    <td><%= link_to "削除", schedule,method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+   </tr>
+ <% end %>
+</tbody>
+</table>
+
+ <div class="Footer">
+  <p>予定合計<span><%= @schedule_counts %></span>件</p>
+  <%= "本日の日付 #{Date.today}"%>
+ </div>
+</div>
+</body>
+
+
+
+
